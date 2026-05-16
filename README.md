@@ -26,10 +26,15 @@ Entwickeln Sie als nächstes einen Webshop, der die folgende Aspekte berücksich
 
 ### Aufgabe 1 - Barrierefreiheit
 
-    Die Website ist WCAG 2.2 AA konform.
-    Die Website ist visuell ansprechend und konsistent gestaltet (Farbschema, Typografie, Layout).
-    Die Website enthält eine Barrierefreiheitserklärung.
-    Hilfreiche Tools: WAVE, AXE DevTools, …
+Die Website ist WCAG 2.2 AA konform.
+
+Die Website ist visuell ansprechend und konsistent gestaltet (Farbschema, Typografie, Layout).
+
+Die Website enthält eine Barrierefreiheitserklärung.
+    
+- basiert auf https://www.digitalbarrierefrei.at/de/umsetzen/barrierefreiheitserklaerung/mustererklaerung-deutsch (wird zum Beispiel auch von https://www.wko.at/barrierefreiheitserklaerung-ifs-pb verwendet)
+
+Hilfreiche Tools: WAVE, AXE DevTools, …
 
 ## Aufgabe 2 - Urheberrecht
 
