@@ -26,7 +26,7 @@
 <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Hauptnavigation">
   <div class="container">
     <!-- Brand / Logo -->
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="showPage('home')" aria-label="Sandstone Games – Startseite">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Sandstone Games – Startseite">
       <!-- Inline SVG logo mark (Wortbildmarke) -->
       <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
         <polygon points="24,4 44,36 4,36" fill="none" stroke="#c8a96e" stroke-width="2.5"/>
@@ -46,13 +46,14 @@
         <li class="nav-item"><a class="nav-link" href="../index.html" id="nav-home">Start</a></li>
         <li class="nav-item"><a class="nav-link" href="shop.html" id="nav-shop">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Kontakt</a></li>
       </ul>
       <!-- Cart -->
       <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
-        <button class="btn btn-sm btn-outline-sand position-relative" onclick="showPage('shop')" aria-label="Warenkorb anzeigen">
+        <a class="btn btn-sm btn-outline-sand position-relative" href="shop.html" aria-label="Warenkorb anzeigen">
           <i class="bi bi-bag"></i>
           <span class="cart-count" id="cart-count" aria-live="polite">0</span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -62,10 +63,12 @@
 <!-- ═══════════════════════════════════════════════════════════════
      PAGE: DATENSCHUTZ (Aufgabe 5)
 ═══════════════════════════════════════════════════════════════ -->
+<main id="main-content">
 <div id="page-privacy" class="page">
   <section aria-labelledby="privacy-title">
     <div class="container" style="padding-top:5rem;">
       <h1 class="section-title text-center" id="privacy-title">Datenschutzerklärung</h1>
+      <h2 class="text-center" style="color:var(--sand-lt);">(Privacy Policy)</h2>
       <div class="divider"></div>
       <p class="text-center mb-4" style="color:var(--sand-lt);font-style:italic;">Gemäß DSGVO (EU) 2016/679 | Stand: Mai 2026</p>
 
@@ -159,6 +162,7 @@
     </div>
   </section>
 </div><!-- /page-privacy -->
+</main>
 
 <!-- ═══════════════════════════════════════════════════════════════
      FOOTER
@@ -168,8 +172,6 @@
     <div class="row g-3 align-items-center">
       <div class="col-md-3">
         <p class="mb-1" style="font-family:'Cinzel',serif;color:var(--sand);">SANDSTONE GAMES</p>
-        <p class="mb-0">Mariahilfer Straße 88, 1070 Wien</p>
-        <p class="mb-0">office@sandstone-games.at</p>
       </div>
       <div class="col-md-5 text-md-center">
         <nav aria-label="Footer-Navigation">
@@ -177,15 +179,11 @@
           <a href="privacy.html" class="mx-2">Datenschutz</a> |
           <a href="accessibility.html" class="mx-2">Barrierefreiheit</a> |
           <a href="imprint.html" class="mx-2">Impressum</a> |
-          <a href="contact.html" class="ms-2">Kontakt</a>
+          <a href="media-used.html" class="ms-2">Urheberrechtliches</a>
         </nav>
       </div>
       <div class="col-md-3 text-md-end">
-        <p class="mb-1">© 2025 Sandstone Games GmbH</p>
-        <p class="mb-0" style="font-size:.75rem;">
-          Lapis et Lignum ist eine eingetragene Marke (angemeldet).<br>
-          Alle Spielinhalte © Sandstone Games GmbH.
-        </p>
+        <p class="mb-1">© 2026 Sandstone Games GmbH</p>
       </div>
     </div>
   </div>
@@ -200,7 +198,7 @@
     <div class="flex-grow-1">
       <strong id="cookie-title" style="font-family:'Cinzel',serif;color:var(--sand);">Cookies & Datenschutz</strong>
       <p id="cookie-desc" class="mb-0 mt-1" style="font-size:.82rem;">
-        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Matomo, selbst gehostet).
+        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Google Analytics).
         Weitere Infos in der <a href="#" onclick=";hideCookieBanner();">Datenschutzerklärung</a>.
       </p>
     </div>

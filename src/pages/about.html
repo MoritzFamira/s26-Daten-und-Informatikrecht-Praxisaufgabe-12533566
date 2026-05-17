@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lapis et Lignum – Ein antikes Echtzeit-Strategiespiel von Sandstone Games. Baue dein Imperium, verwalte Ressourcen und führe dein Volk zum Ruhm." />
+  <title>Lapis et Lignum – Sandstone Games</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Google Fonts: Cinzel (display) + Lora (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<!-- Skip to main content (WCAG) -->
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Sandstone Games – Startseite">
+      <!-- Inline SVG logo mark (Wortbildmarke) -->
+      <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <polygon points="24,4 44,36 4,36" fill="none" stroke="#c8a96e" stroke-width="2.5"/>
+        <rect x="14" y="36" width="20" height="8" fill="#c8a96e" opacity=".7"/>
+        <circle cx="24" cy="24" r="5" fill="#6b7c3a"/>
+      </svg>
+      SANDSTONE<span>&nbsp;GAMES</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+            aria-controls="navMain" aria-expanded="false" aria-label="Navigation öffnen">
+      <i class="bi bi-list text-warning fs-4"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto gap-1" role="list">
+        <li class="nav-item"><a class="nav-link" href="../index.html" id="nav-home">Start</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html" id="nav-shop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link active-nav" href="about.html" id="nav-about">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Kontakt</a></li>
+      </ul>
+      <!-- Cart -->
+      <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
+        <a class="btn btn-sm btn-outline-sand position-relative" href="shop.html" aria-label="Warenkorb anzeigen">
+          <i class="bi bi-bag"></i>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE: ABOUT (Aufgabe 3 – Marke)
+═══════════════════════════════════════════════════════════════ -->
+<main id="main-content">
+<div id="page-about" class="page">
+  <section aria-labelledby="about-title">
+    <div class="container">
+      <h1 class="section-title text-center" id="about-title">Über uns</h1>
+      <div class="divider"></div>
+
+      <!-- Company Info >
+      <div class="row g-4 mb-5 align-items-center">
+        <div class="col-md-6">
+          <h2 class="section-title" style="font-size:1.5rem;">Sandstone Games GmbH</h2>
+          <p>Sandstone Games wurde 2024 in Wien gegründet – ein unabhängiges Studio mit derzeit <strong>7 Mitarbeiterinnen und Mitarbeitern</strong>, das sich dem Aufbau tiefgründiger, atmosphärischer Strategiespiele verschrieben hat.</p>
+          <p>Unser erstes Projekt, <em>Lapis et Lignum</em>, schöpft aus der Tradition klassischer Aufbauspiele und verbindet sie mit moderner Spieltechnik und historischer Authentizität.</p>
+          <ul class="list-unstyled" style="font-size:.9rem;color:var(--sand-lt);">
+            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Mariahilfer Straße 88, 1070 Wien, Österreich</li>
+            <li><i class="bi bi-calendar me-2" aria-hidden="true"></i>Gegründet: 2024</li>
+            <li><i class="bi bi-people me-2" aria-hidden="true"></i>7 Mitarbeitende</li>
+            <li><i class="bi bi-briefcase me-2" aria-hidden="true"></i>Rechtsform: GmbH</li>
+            <li><i class="bi bi-envelope me-2" aria-hidden="true"></i>office@sandstone-games.at</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="screenshot-placeholder" style="aspect-ratio:4/3;">STUDIO-FOTO (Eigenproduktion)</div>
+        </div>
+      </div>
+
+      <hr style="border-color:var(--sand);margin:3rem 0;"-->
+
+      <!-- Marken (Aufgabe 3) -->
+      <h2 class="section-title text-center mb-2" id="marken-title">Unsere Marken</h2>
+      <div class="divider"></div>
+      <p class="text-center mb-4" style="color:var(--sand-lt);font-size:.9rem;">
+        Sandstone Games verfügt über drei unterschiedliche Markenformen, die bei EUIPO angemeldet werden.
+      </p>
+
+      <!-- Marke 1: Wortmarke -->
+      <div class="brand-block">
+        <div class="row align-items-center g-4">
+          <div class="col-md-3 text-center">
+            <div style="background:#2a2218;border:1px solid var(--sand);border-radius:4px;padding:2rem;">
+              <p style="font-family:'Cinzel',serif;font-size:1.2rem;font-weight:900;color:var(--sand);letter-spacing:.2em;margin:0;">SANDSTONE</p>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <h3 style="font-family:'Cinzel',serif;color:var(--sand);">1. Wortmarke: „SANDSTONE"</h3>
+            <p><strong>Bedeutung:</strong> Sandstein steht für Beständigkeit, die Qualität und das Handwerk welches in unsere Spiele fließt.</p>
+            <div>
+              <span class="nizza-badge">Klasse 35</span>
+              <span class="nizza-badge">Klasse 41</span>
+              <span class="nizza-badge mt-1">Klasse 42</span>
+              <span style="font-size:.8rem;color:var(--sand-lt);">Web-Shop, Unterhaltung, Softwareentwicklung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marke 2: Bildmarke -->
+      <div class="brand-block">
+        <div class="row align-items-center g-4">
+          <div class="col-md-3 text-center">
+            <div style="background:#2a2218;border:1px solid var(--sand);border-radius:4px;padding:2rem;">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:80px;" aria-label="Sandstone Games Bildmarke: Dreieck mit Quader und Kreis">
+                <polygon points="40,8 72,60 8,60" fill="none" stroke="#c8a96e" stroke-width="3"/>
+                <rect x="22" y="60" width="36" height="12" fill="#c8a96e" opacity=".7"/>
+                <circle cx="40" cy="40" r="8" fill="#6b7c3a"/>
+              </svg>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <h3 style="font-family:'Cinzel',serif;color:var(--sand);">2. Bildmarke: Unser Logo</h3>
+            <p><strong>Bedeutung:</strong> das Dreieck steht für Stabilität, das Rechteck ist ein solides Fundament auf dem unser Unternehmen basiert, der Kreis steht für die Menschen die in unserem Unternehmen arbeiten. Durch ihre Arbeit wächst jedes unserer Produkte zu etwas großartigem.</p>
+            <div>
+              <span class="nizza-badge">Klasse 35</span>
+              <span class="nizza-badge">Klasse 41</span>
+              <span class="nizza-badge mt-1">Klasse 42</span>
+              <span style="font-size:.8rem;color:var(--sand-lt);">Web-Shop, Unterhaltung, Softwareentwicklung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marke 3: Bewegungsmarke -->
+<div class="brand-block">
+  <div class="row align-items-center g-4">
+    <div class="col-md-3 text-center">
+      <div style="background:#2a2218;border:1px solid var(--sand);border-radius:4px;padding:2rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;">
+        <div id="stage" style="position:relative;">
+          <svg id="logo-svg" viewBox="0 0 48 48" width="120" height="120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line id="l-left"  x1="24" y1="4"  x2="24" y2="4"  stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round"/>
+            <line id="l-right" x1="24" y1="4"  x2="24" y2="4"  stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round"/>
+            <line id="l-base"  x1="4"  y1="36" x2="4"  y2="36" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round"/>
+            <rect id="r-sockel" x="14" y="36" width="20" height="8" fill="#c8a96e" opacity="0"/>
+            <circle id="c-dot" cx="24" cy="24" r="0" fill="#6b7c3a"/>
+          </svg>
+          <button id="rbtn" aria-label="Intro wiederholen" style="margin-top:.5rem;font-family:serif;font-size:10px;letter-spacing:3px;color:#c8a96e;background:transparent;border:1px solid #c8a96e;padding:5px 18px;cursor:pointer;border-radius:2px;opacity:0;">&#8635; REPLAY</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <h3 style="font-family:'Cinzel',serif;color:var(--sand);">3. Bewegungsmarke: Logo-Animation</h3>
+      <p><strong>Bedeutung:</strong> Die aufbauende Animation steht für unser Lieblingsgenre: Das Aufbau-Strategiespiel.</p>
+      <div>
+        <span class="nizza-badge">Klasse 35</span>
+        <span class="nizza-badge">Klasse 41</span>
+        <span class="nizza-badge mt-1">Klasse 42</span>
+        <span style="font-size:.8rem;color:var(--sand-lt);">Web-Shop, Unterhaltung, Softwareentwicklung</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function lerp(a,b,t){ return a+(b-a)*t; }
+  function easeOut(t){ return 1-Math.pow(1-t,3); }
+  function easeInOut(t){ return t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2; }
+
+  function animLine(el,x1,y1,x2,y2,dur,delay,ease,cb){
+    setTimeout(()=>{
+      const sx1=+el.getAttribute('x1'),sy1=+el.getAttribute('y1'),
+            sx2=+el.getAttribute('x2'),sy2=+el.getAttribute('y2');
+      const s=performance.now();
+      (function step(now){
+        const p=ease(Math.min((now-s)/dur,1));
+        el.setAttribute('x1',lerp(sx1,x1,p));
+        el.setAttribute('y1',lerp(sy1,y1,p));
+        el.setAttribute('x2',lerp(sx2,x2,p));
+        el.setAttribute('y2',lerp(sy2,y2,p));
+        if(p<1) requestAnimationFrame(step); else if(cb) cb();
+      })(performance.now());
+    },delay);
+  }
+
+  function animAttr(el,attr,from,to,dur,delay,ease,cb){
+    setTimeout(()=>{
+      const s=performance.now();
+      (function step(now){
+        const p=ease(Math.min((now-s)/dur,1));
+        el.setAttribute(attr,lerp(from,to,p));
+        if(p<1) requestAnimationFrame(step); else if(cb) cb();
+      })(performance.now());
+    },delay);
+  }
+
+  function fade(el,to,dur,delay,cb){
+    setTimeout(()=>{
+      const from=parseFloat(el.style.opacity||0);
+      const s=performance.now();
+      (function step(now){
+        const p=Math.min((now-s)/dur,1);
+        el.style.opacity=lerp(from,to,p);
+        if(p<1) requestAnimationFrame(step); else if(cb) cb();
+      })(performance.now());
+    },delay);
+  }
+
+  function reset(){
+    document.getElementById('l-left').setAttribute('x1',24);  document.getElementById('l-left').setAttribute('y1',4);
+    document.getElementById('l-left').setAttribute('x2',24);  document.getElementById('l-left').setAttribute('y2',4);
+    document.getElementById('l-right').setAttribute('x1',24); document.getElementById('l-right').setAttribute('y1',4);
+    document.getElementById('l-right').setAttribute('x2',24); document.getElementById('l-right').setAttribute('y2',4);
+    document.getElementById('l-base').setAttribute('x1',4);   document.getElementById('l-base').setAttribute('y1',36);
+    document.getElementById('l-base').setAttribute('x2',4);   document.getElementById('l-base').setAttribute('y2',36);
+    document.getElementById('r-sockel').setAttribute('opacity',0);
+    document.getElementById('c-dot').setAttribute('r',0);
+    document.getElementById('rbtn').style.opacity=0;
+  }
+
+  function run(){
+    reset();
+    animLine(document.getElementById('l-left'),  4,36,24,4, 500,100,easeOut);
+    animLine(document.getElementById('l-right'),44,36,24,4, 500,100,easeOut);
+    animLine(document.getElementById('l-base'),  4,36,44,36, 400,500,easeInOut,()=>{
+      fade(document.getElementById('r-sockel'),0.7,300,0,()=>{
+        animAttr(document.getElementById('c-dot'),'r',0,5,400,100,easeOut,()=>{
+          fade(document.getElementById('rbtn'),1,400,300);
+        });
+      });
+    });
+  }
+
+  document.getElementById('rbtn').addEventListener('click',run);
+  setTimeout(run,400);
+})();
+</script>
+  </section>
+</div><!-- /page-about -->
+
+</main><!-- /main-content -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer role="contentinfo" class="py-4 mt-4">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-3">
+        <p class="mb-1" style="font-family:'Cinzel',serif;color:var(--sand);">SANDSTONE GAMES</p>
+      </div>
+      <div class="col-md-5 text-md-center">
+        <nav aria-label="Footer-Navigation">
+          <a href="license.html" class="me-2">Lizenz</a> |
+          <a href="privacy.html" class="mx-2">Datenschutz</a> |
+          <a href="accessibility.html" class="mx-2">Barrierefreiheit</a> |
+          <a href="imprint.html" class="mx-2">Impressum</a> |
+          <a href="media-used.html" class="ms-2">Urheberrechtliches</a>
+        </nav>
+      </div>
+      <div class="col-md-3 text-md-end">
+        <p class="mb-1">© 2026 Sandstone Games GmbH</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COOKIE BANNER
+═══════════════════════════════════════════════════════════════ -->
+<div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+  <div class="d-flex flex-wrap align-items-center gap-3">
+    <div class="flex-grow-1">
+      <strong id="cookie-title" style="font-family:'Cinzel',serif;color:var(--sand);">Cookies & Datenschutz</strong>
+      <p id="cookie-desc" class="mb-0 mt-1" style="font-size:.82rem;">
+        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Google Analytics).
+        Weitere Infos in der <a href="privacy.html" onclick="hideCookieBanner();">Datenschutzerklärung</a>.
+      </p>
+    </div>
+    <div class="d-flex gap-2 flex-shrink-0">
+      <button class="btn btn-sm btn-outline-sand" onclick="rejectCookies()" aria-label="Nur notwendige Cookies akzeptieren">Nur notwendige</button>
+      <button class="btn btn-sm btn-sand" onclick="acceptCookies()" aria-label="Alle Cookies akzeptieren">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="main-toast" class="toast align-items-center text-bg-dark border border-warning" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body" id="toast-msg">Nachricht</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Schließen"></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- script at the end so js loads after rest of the page -->
+<script src="../main.js"></script>
+</body>
+</html>

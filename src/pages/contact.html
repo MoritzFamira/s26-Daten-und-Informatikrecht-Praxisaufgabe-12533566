@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lapis et Lignum – Ein antikes Echtzeit-Strategiespiel von Sandstone Games. Baue dein Imperium, verwalte Ressourcen und führe dein Volk zum Ruhm." />
+  <title>Lapis et Lignum – Sandstone Games</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Google Fonts: Cinzel (display) + Lora (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<!-- Skip to main content (WCAG) -->
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Sandstone Games – Startseite">
+      <!-- Inline SVG logo mark (Wortbildmarke) -->
+      <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <polygon points="24,4 44,36 4,36" fill="none" stroke="#c8a96e" stroke-width="2.5"/>
+        <rect x="14" y="36" width="20" height="8" fill="#c8a96e" opacity=".7"/>
+        <circle cx="24" cy="24" r="5" fill="#6b7c3a"/>
+      </svg>
+      SANDSTONE<span>&nbsp;GAMES</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+            aria-controls="navMain" aria-expanded="false" aria-label="Navigation öffnen">
+      <i class="bi bi-list text-warning fs-4"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto gap-3" role="list">
+        <li class="nav-item"><a class="nav-link" href="../index.html" id="nav-home">Start</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html" id="nav-shop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link active-nav" href="contact.html" id="nav-contact">Kontakt</a></li>
+      </ul>
+      <!-- Cart -->
+      <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
+        <a class="btn btn-sm btn-outline-sand position-relative" href="shop.html" aria-label="Warenkorb anzeigen">
+          <i class="bi bi-bag"></i>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE: KONTAKT
+═══════════════════════════════════════════════════════════════ -->
+<main id="main-content">
+<div >
+  <section aria-labelledby="contact-title">
+    <div class="container">
+      <h1 class="section-title text-center" id="contact-title">Kontakt</h1>
+      <div class="divider"></div>
+
+      <div class="row g-5 mb-5">
+        <!-- Contact Form -->
+        <div class="col-md-7 mx-auto">
+          <div class="card-stone p-4">
+            <h2 class="section-title" style="font-size:1.3rem;">Schreiben Sie uns</h2>
+            <p style="font-size:.9rem;color:var(--sand-lt);">Wir beantworten Anfragen innerhalb von 2 Werktagen.</p>
+            <form onsubmit="submitForm(event)" novalidate aria-label="Kontaktformular">
+              <div class="mb-3">
+                <label for="contact-name" class="form-label">Name *</label>
+                <input type="text" class="form-control" id="contact-name" name="name" required autocomplete="name" aria-required="true" placeholder="Ihr vollständiger Name" />
+              </div>
+              <div class="mb-3">
+                <label for="contact-email" class="form-label">E-Mail *</label>
+                <input type="email" class="form-control" id="contact-email" name="email" required autocomplete="email" aria-required="true" placeholder="ihre@email.at" />
+              </div>
+              <div class="mb-3">
+                <label for="contact-subject" class="form-label">Betreff *</label>
+                <select class="form-select" id="contact-subject" name="subject" required aria-required="true">
+                  <option value="" disabled selected>Bitte wählen…</option>
+                  <option>Technischer Support</option>
+                  <option>Kaufanfrage / Lizenz</option>
+                  <option>Presse / Medien</option>
+                  <option>Datenschutz</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="contact-msg" class="form-label">Nachricht *</label>
+                <textarea class="form-control" id="contact-msg" name="message" rows="5" required aria-required="true" placeholder="Ihre Nachricht…"></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="privacy-check" required aria-required="true" />
+                <label class="form-check-label" for="privacy-check" style="font-size:.85rem;color:var(--sand-lt);">
+                  Ich habe die <a href="#" onclick="showPage('privacy')">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *
+                </label>
+              </div>
+              <button type="submit" class="btn btn-sand w-100">Nachricht senden</button>
+              <p class="mt-2 text-center" style="font-size:.75rem;color:var(--sand);">* Pflichtfelder | Dies ist eine Mock-Webseite – keine echten Daten werden übertragen.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div><!-- /page-contact -->
+
+</main><!-- /main-content -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer role="contentinfo" class="py-4 mt-4">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-3">
+        <p class="mb-1" style="font-family:'Cinzel',serif;color:var(--sand);">SANDSTONE GAMES</p>
+      </div>
+      <div class="col-md-5 text-md-center">
+        <nav aria-label="Footer-Navigation">
+          <a href="license.html" class="me-2">Lizenz</a> |
+          <a href="privacy.html" class="mx-2">Datenschutz</a> |
+          <a href="accessibility.html" class="mx-2">Barrierefreiheit</a> |
+          <a href="imprint.html" class="mx-2">Impressum</a> |
+          <a href="media-used.html" class="ms-2">Urheberrechtliches</a>
+        </nav>
+      </div>
+      <div class="col-md-3 text-md-end">
+        <p class="mb-1">© 2026 Sandstone Games GmbH</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COOKIE BANNER
+═══════════════════════════════════════════════════════════════ -->
+<div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+  <div class="d-flex flex-wrap align-items-center gap-3">
+    <div class="flex-grow-1">
+      <strong id="cookie-title" style="font-family:'Cinzel',serif;color:var(--sand);">Cookies & Datenschutz</strong>
+      <p id="cookie-desc" class="mb-0 mt-1" style="font-size:.82rem;">
+        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Google Analytics).
+        Weitere Infos in der <a href="privacy.html" onclick="hideCookieBanner();">Datenschutzerklärung</a>.
+      </p>
+    </div>
+    <div class="d-flex gap-2 flex-shrink-0">
+      <button class="btn btn-sm btn-outline-sand" onclick="rejectCookies()" aria-label="Nur notwendige Cookies akzeptieren">Nur notwendige</button>
+      <button class="btn btn-sm btn-sand" onclick="acceptCookies()" aria-label="Alle Cookies akzeptieren">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="main-toast" class="toast align-items-center text-bg-dark border border-warning" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body" id="toast-msg">Nachricht</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Schließen"></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- script at the end so js loads after rest of the page -->
+<script src="../main.js"></script>
+</body>
+</html>

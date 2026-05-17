@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-
 <!-- Skip to main content (WCAG) -->
 <a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
 
@@ -26,7 +25,7 @@
 <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Hauptnavigation">
   <div class="container">
     <!-- Brand / Logo -->
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#" onclick="showPage('home')" aria-label="Sandstone Games – Startseite">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Sandstone Games – Startseite">
       <!-- Inline SVG logo mark (Wortbildmarke) -->
       <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
         <polygon points="24,4 44,36 4,36" fill="none" stroke="#c8a96e" stroke-width="2.5"/>
@@ -46,10 +45,11 @@
         <li class="nav-item"><a class="nav-link" href="../index.html" id="nav-home">Start</a></li>
         <li class="nav-item"><a class="nav-link active-nav" href="#" id="nav-shop">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">Über uns</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Kontakt</a></li>
       </ul>
       <!-- Cart -->
       <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
-        <button class="btn btn-sm btn-outline-sand position-relative" onclick="showPage('shop')" aria-label="Warenkorb anzeigen">
+        <button class="btn btn-sm btn-outline-sand position-relative" aria-label="Warenkorb anzeigen">
           <i class="bi bi-bag"></i>
           <span class="cart-count" id="cart-count" aria-live="polite">0</span>
         </button>
@@ -61,6 +61,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      PAGE: SHOP
 ═══════════════════════════════════════════════════════════════ -->
+<main id="main-content">
 <div id="page-shop" class="page">
   <section aria-labelledby="shop-title">
     <div class="container" style="padding-top:5rem;">
@@ -84,6 +85,7 @@
               <li class="mb-1">Community-Forum-Zugang</li>
               <li class="mb-1">Digitales Handbuch (PDF)</li-->
             </ul>
+            
             <button class="btn btn-outline-sand w-100 mt-3" onclick="addToCart('Standard Edition','€ 24,99')" aria-label="Standard Edition in den Warenkorb legen">In den Warenkorb</button>
           </div>
         </div>
@@ -137,11 +139,31 @@
           <strong style="font-family:'Cinzel',serif;color:var(--sand);">Gesamt:</strong>
           <span id="cart-total" style="font-family:'Cinzel',serif;font-size:1.4rem;color:var(--sand);">€ 0,00</span>
         </div>
+        <div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="privacy-check" required aria-required="true" />
+  <label class="form-check-label" for="privacy-check" style="font-size:.85rem;color:var(--sand-lt);">
+    Ich habe die <a href="privacy.html">Datenschutzerklärung</a> gelesen und bin mit der darin beschriebenen Verarbeitung meiner Daten einverstanden. 
+  </label>
+</div>
+
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="terms-check" required aria-required="true" />
+  <label class="form-check-label" for="terms-check" style="font-size:.85rem;color:var(--sand-lt);">
+    Ich akzeptiere die <a href="license.html">Lizenzvereinbarung</a>. 
+  </label>
+</div>
+
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="age-check" required aria-required="true" />
+  <label class="form-check-label" for="age-check" style="font-size:.85rem;color:var(--sand-lt);">
+    Ich bestätige, dass ich mindestens 16 Jahre alt bin oder die Einwilligung meines gesetzlichen Erziehungsberechtigten für diesen Kauf habe. 
+  </label>
+</div>
         <button class="btn btn-olive w-100 mt-3" onclick="mockCheckout()" aria-label="Zur Kasse gehen">
-          Zur Kasse (Demo)
+          Zur Kasse (gemockt)
         </button>
         <p class="mt-2 text-center" style="font-size:.75rem;color:var(--sand);">
-          Dies ist eine Demo-Website. Keine echten Transaktionen. Alle Preise inkl. 20% MwSt.
+          Dies ist eine Mock-Website. Keine echten Transaktionen. Alle Preise inkl. 20% USt.
         </p>
       </div>
 
@@ -188,25 +210,20 @@
 <footer role="contentinfo" class="py-4 mt-4">
   <div class="container">
     <div class="row g-3 align-items-center">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <p class="mb-1" style="font-family:'Cinzel',serif;color:var(--sand);">SANDSTONE GAMES</p>
-        <p class="mb-0">Mariahilfer Straße 88, 1070 Wien</p>
-        <p class="mb-0">office@sandstone-games.at</p>
       </div>
-      <div class="col-md-4 text-md-center">
+      <div class="col-md-5 text-md-center">
         <nav aria-label="Footer-Navigation">
           <a href="license.html" class="me-2">Lizenz</a> |
           <a href="privacy.html" class="mx-2">Datenschutz</a> |
           <a href="accessibility.html" class="mx-2">Barrierefreiheit</a> |
-          <a href="imprint.html" class="ms-2">Impressum</a>
+          <a href="imprint.html" class="mx-2">Impressum</a> |
+          <a href="media-used.html" class="ms-2">Urheberrechtliches</a>
         </nav>
       </div>
-      <div class="col-md-4 text-md-end">
-        <p class="mb-1">© 2025 Sandstone Games GmbH</p>
-        <p class="mb-0" style="font-size:.75rem;">
-          Lapis et Lignum ist eine eingetragene Marke (angemeldet).<br>
-          Alle Spielinhalte © Sandstone Games GmbH.
-        </p>
+      <div class="col-md-3 text-md-end">
+        <p class="mb-1">© 2026 Sandstone Games GmbH</p>
       </div>
     </div>
   </div>
@@ -221,7 +238,7 @@
     <div class="flex-grow-1">
       <strong id="cookie-title" style="font-family:'Cinzel',serif;color:var(--sand);">Cookies & Datenschutz</strong>
       <p id="cookie-desc" class="mb-0 mt-1" style="font-size:.82rem;">
-        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Matomo, selbst gehostet).
+        Wir verwenden notwendige Cookies für den Betrieb und optionale Analyse-Cookies (Google Analytics).
         Weitere Infos in der <a href="privacy.html" onclick="hideCookieBanner();">Datenschutzerklärung</a>.
       </p>
     </div>
